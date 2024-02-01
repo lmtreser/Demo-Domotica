@@ -1,9 +1,15 @@
-# Demo-Domotica
-Demo de implementación de tecnologías de software y hardware para proyectos de dómotica de bajo costo.
+# Demo Domótica
 
-#Sistema Domótico Educativo
+Demo de implementación de tecnologías de software y hardware aplicadas a proyectos de dómotica de bajo costo o con fines educativos.
 
-##Panel web
+El sistema domótico esta construido alrede
+
+1. Servidor 
+2. Panel Web
+3. App para Android
+4. Hardware
+
+### Panel web
 
 El panel web está construido alrededor de herramientas libres y con la intención de ser fácil de mantener y simple.
 
@@ -12,15 +18,32 @@ El panel web está construido alrededor de herramientas libres y con la intenci�
 * [Eclipse Paho JS](https://github.com/eclipse/paho.mqtt.javascript)
 * [Free Public MQTT Broker](https://www.hivemq.com/public-mqtt-broker/)
 
-![Captura de pantalla panel web](./assets/web.png "Panel Web")
+![Captura de pantalla panel web](./docs/assets/web_tablet_02.png)
 
-##App para Android
+### App para Android
 
-[MIT App Inventor](https://appinventor.mit.edu/)
+MQTT Dashboard v2 es la App que permite conectarse a un broker MQTT, para enviar y recibir mensajes hacia (y desde) una placa ESP8266 o compatible. En la carpeta *apk* ..... Esta diseñada con la herramienta [MIT App Inventor](https://appinventor.mit.edu/).
 
-##Hardware
+Changelog:
+
+21/02/2023 Agregada pantalla de configuración de broker y topics.
+
+Extensión:
+
+AI2 MQTT Extension: Sensor Readings back and forth
+https://ullisroboterseite.de/android-AI2-PahoMQTT-en.html
+
+Créditos:
+
+Light switch icons created by Superarticons - Flaticon
+https://www.flaticon.com/free-icons/light-switch
+
+
+### Hardware
 
 El firmware está escrito en [MicroPython](http://micropython.org).
+
+![](./docs/schematic.png)
 
 ## Licencia
 
