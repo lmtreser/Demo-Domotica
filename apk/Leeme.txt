@@ -1,0 +1,17 @@
+MQTT Dashboard v2
+
+App que permite conectarse a un broker MQTT, para enviar y recibir mensajes hacia (y desde) una placa ESP8266 o compatible.
+
+Changelog:
+
+21/02/2023 Agregada pantalla de configuración de broker y topics.
+
+Extensión:
+
+AI2 MQTT Extension: Sensor Readings back and forth
+https://ullisroboterseite.de/android-AI2-PahoMQTT-en.html
+
+Créditos:
+
+Light switch icons created by Superarticons - Flaticon
+https://www.flaticon.com/free-icons/light-switch
