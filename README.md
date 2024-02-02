@@ -38,28 +38,18 @@ El panel está organizado en tarjetas, donde despliega información o permite in
 
 ![MQTT Dashboard v2](./docs/assets/MQTT_Dashboard_v2.png)
 
-En la carpeta *apk* ..... 
+El archivo `./src/apk/MQTT_Dashboard_v2.aia` es el proyecto completo escrito en MIT App Inventor. Necesita las siguientes dependencias:
 
-Changelog:
-
-21/02/2023 Agregada pantalla de configuración de broker y topics.
-
-Extensión:
-
-AI2 MQTT Extension: Sensor Readings back and forth
-https://ullisroboterseite.de/android-AI2-PahoMQTT-en.html
-
-Créditos:
-
-Light switch icons created by Superarticons - Flaticon
-https://www.flaticon.com/free-icons/light-switch
-
+- [AI2 MQTT Extension: Sensor Readings back and forth](https://ullisroboterseite.de/android-AI2-PahoMQTT-en.html)
+- [Light switch icons created by Superarticons - Flaticon](https://www.flaticon.com/free-icons/light-switch)
 
 ### Hardware
 
-El firmware está escrito en [MicroPython](http://micropython.org).
+El hardware, diseñado con la herramienta [KiCad EDA](https://www.kicad.org/), está basado en una placa NodeMCU (que incorpora el SoC ESP8266), dos pulsadores, un sensor de temperatura y humedad ambiente DHT11, y dos relés para manejar potencia. Se puede alimentar con una fuente de pared de 12V.
 
 ![](./docs/schematic.png)
+
+El ESP8266 en este caso tiene incorporado el interprete de [MicroPython](http://micropython.org), por lo que el firmware está escrito en ese lenguaje. Para poder conectarse a un broker MQTT necesita el módulo `umqttsimple.py`.
 
 ## Licencia
 
