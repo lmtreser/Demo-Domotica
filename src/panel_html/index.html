@@ -1,0 +1,137 @@
+<!-- Panel para dispositivo domótico - Julio de 2022 -->
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        <meta charset="utf-8" />
+        <meta name="description" content="Panel domotico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/mvp.css" />
+        <link rel="stylesheet" href="css/micss.css" />
+        <script language="javascript" type="text/javascript" src="js/p5.min.js"></script>
+        <script language="javascript" type="text/javascript" src="js/paho-mqtt-min.js"></script>
+        <script language="javascript" type="text/javascript" src="js/sketch.js"></script>
+        <title>Panel Domótico</title>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <img alt="Logo" src="img/logo.jpg" height="150"/></a>
+                <h1>SISTEMA DOMÓTICO</h1>
+                <ul>
+                    <li><a href="http://www.automatismos-mdq.com.ar/blog/">Inicio</a>
+                    </li>
+                    <li><a href="https://github.com/lmtreser/Demo-Domotica">Código Fuente</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <aside id="div_living">
+                    <h3>Living</h3>
+                    <button id="but_living" type="submit" onclick="evento_living()">Luces</button>
+                    <img id="div_luz_living" alt="Luminaria" src="img/lamp_off.svg" height="100"/></a>
+                </aside>
+                <aside id="div_cocina">
+                    <h3>Cocina</h3>
+                    <button id="but_cocina" type="submit" onclick="evento_cocina()">Luces</button>
+                    <img id="div_luz_cocina" alt="Luminaria" src="img/lamp_off.svg" height="100"/></a>
+                </aside>
+                <aside id="div_sensores">
+                    <h3>Sensores</h3>
+                    <h4 id="h4_temp">Temperatura: 00 °C</h4>
+                    <h4 id="h4_hum">Humedad: 00 %RH</h4>
+                    <p><i>* Datos en tiempo real.</i></p>
+                </aside>
+                <aside>
+                    <h3>Control de Acceso</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID Llave</th>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0001</td>
+                                <td>06072023</td>
+                                <td>14:32</td>
+                            </tr>
+                            <tr>
+                                <td>0002</td>
+                                <td>07072023</td>
+                                <td>18:30</td>
+                            </tr>
+                            <tr>
+                                <td>0003</td>
+                                <td>07072023</td>
+                                <td>19:00</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </aside>
+                <aside>
+                    <h3>Estado Sensores</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Fecha</th>
+                                <th>Hora</th>
+                                <th>°C</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>T-01</td>
+                                <td>06072023</td>
+                                <td>18:00</td>
+                                <td>11</td>
+                            </tr>
+                            <tr>
+                                <td>T-02</td>
+                                <td>06072023</td>
+                                <td>18:30</td>
+                                <td>10</td>
+                            </tr>
+                            <tr>
+                                <td>T-03</td>
+                                <td>06072023</td>
+                                <td>19:00</td>
+                                <td>9</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </aside>
+                <aside>
+                    <h3>Datos del Servidor</h3>
+                    <p id="div_status">Estado: offline</p>
+                    <p id="div_host">Host:</p>
+                    <p id="div_port">Puerto:</p>
+                    <p id="div_clientid">ID Cliente:</p>
+                </aside>
+            </section>
+        <section>
+            <hr>
+            <aside>
+                <h3>Configuración Broker MQTT</h3>
+                <label for="input1">Servidor:</label>
+                <input type="text" id="input1" name="input1" size="20" placeholder="Ingrese el host">
+                <label for="input2">Puerto:</label>
+                <input type="text" id="input2" name="input2" size="20" placeholder="Ingrese el puerto">
+                <button id="but_form" type="submit" onclick="formMqtt()">Guardar Configuración</button>
+            </aside>
+        </section>
+        </main>
+        <footer>
+            <hr>
+            <p>
+                <small>Ejemplo Panel Domótico con tecnologías web.</small>
+                <br>
+                <small>Prof. Lucas Martín Treser | Mar del Plata 2023</small>
+            </p>
+        </footer>
+    </body>
+</html>
