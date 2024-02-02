@@ -114,6 +114,7 @@ function MQTTconnect() {
   let options = {
     timeout: 3,
     onSuccess: onConnect,
+    SSL: true,
   };
 
   mqtt.onMessageArrived = onMessageArrived;
