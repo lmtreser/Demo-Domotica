@@ -1,28 +1,44 @@
 # Demo Domótica
 
-Demo de implementación de tecnologías de software y hardware aplicadas a proyectos de dómotica de bajo costo o con fines educativos.
+Demo de implementación de tecnologías de software y hardware aplicadas a proyectos de dómotica de bajo costo o con fines educativos. El sistema domótico esta planteando en cuatro componentes:
 
-El sistema domótico esta construido alrede
-
-1. Servidor 
+1. Servidor, broker MQTT 
 2. Panel Web
 3. App para Android
-4. Hardware
+4. Dispositivo basado en ESP8266
+
+### Servidor MQTT
+
+En este proyecto se utiliza el [Broker MQTT público](https://www.hivemq.com/public-mqtt-broker/) (y gratuito) de la empresa HiveMQ. Se puede acceder de manera segura en:
+
+```sh
+Broker: broker.hivemq.com
+TCP Port: 1883
+Websocket Port: 8000
+TLS TCP Port: 8883
+TLS Websocket Port: 8884
+```
 
 ### Panel web
 
-El panel web está construido alrededor de herramientas libres y con la intención de ser fácil de mantener y simple.
+El *panel web* es un cliente local que envia y recibe información al broker MQTT. Está construido alrededor de herramientas libres y con la intención de ser fácil de mantener y simple.
 
-* [MVP.css](https://andybrewer.github.io/mvp/)
-* [P5.js](https://p5js.org/es/)
-* [Eclipse Paho JS](https://github.com/eclipse/paho.mqtt.javascript)
-* [Free Public MQTT Broker](https://www.hivemq.com/public-mqtt-broker/)
+* [MVP.css](https://andybrewer.github.io/mvp/), es una hoja de estilo minimalista para elementos HTML
+* [P5.js](https://p5js.org/es/), p5.js es una biblioteca de JavaScript para programación creativa
+* [Eclipse Paho JS](https://github.com/eclipse/paho.mqtt.javascript), es una biblioteca cliente escrita en Javascript que utiliza WebSockets para conectarse a un Broker MQTT
+
+El panel está organizado en tarjetas, donde despliega información o permite interactuar con el hardware.
 
 ![Captura de pantalla panel web](./docs/assets/web_tablet_02.png)
+*Panel Web en Android*
 
 ### App para Android
 
-MQTT Dashboard v2 es la App que permite conectarse a un broker MQTT, para enviar y recibir mensajes hacia (y desde) una placa ESP8266 o compatible. En la carpeta *apk* ..... Esta diseñada con la herramienta [MIT App Inventor](https://appinventor.mit.edu/).
+**MQTT Dashboard v2** es una aplicación para Android desarrollada con la herramienta [MIT App Inventor](https://appinventor.mit.edu/). Permite conectarse a un broker MQTT, para enviar y recibir mensajes hacia (y desde) una placa ESP8266 o compatible. 
+
+![MQTT Dashboard v2](./docs/assets/MQTT_Dashboard_v2.png)
+
+En la carpeta *apk* ..... 
 
 Changelog:
 
