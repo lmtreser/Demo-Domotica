@@ -2,7 +2,7 @@
 let mqtt;
 let reconnectTimeout = 2000;
 let host = "broker.hivemq.com";
-let port = 8000;
+let port = 8884;
 let broker_status = "offline";
 let cliente = "clientPW01";
 
