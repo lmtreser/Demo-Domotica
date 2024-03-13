@@ -1,0 +1,8 @@
+Dashboard WWW
+
+Una simple app que utiliza el visor web para cargar un dashboard web.
+
+Créditos:
+
+Adjustment icons created by zero_wing - Flaticon
+https://www.flaticon.com/free-icons/adjustment
