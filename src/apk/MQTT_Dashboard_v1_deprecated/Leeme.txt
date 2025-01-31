@@ -1,0 +1,27 @@
+MQTT Dashboard
+
+App que permite conectarse a un broker MQTT, para enviar y recibir mensajes hacia (y desde) una placa ESP8266 o compatible.
+
+Datos de conexión:
+
+Broker: dirección del servidor, por defecto utiliza el broker test.mosquitto.org
+Puerto: número de puerto del broker, por defecto 1883
+Usuario: nombre de usuario (opcional)
+Contraseña: contraseña (opcional)
+
+Los topics a utilizar son:
+
+lmtreser/sensor1 	Recibir y mostrar datos numéricos de un sensor
+lmtreser/sensor2 	Recibir y mostrar datos numéricos de un sensor
+lmtreser/actuador1 	Enviar una señal (true/false) a un actuador
+lmtreser/actuador2 	Enviar una señal (true/false) a un actuador
+
+Extensión:
+
+AI2 MQTT Extension: Sensor Readings back and forth
+https://ullisroboterseite.de/android-AI2-PahoMQTT-en.html
+
+Créditos:
+
+Dashboard icons created by Vectors Market - Flaticon
+https://www.flaticon.com/free-icons/dashboard
